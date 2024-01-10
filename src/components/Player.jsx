@@ -3,6 +3,7 @@ import { useState
 export default function Player ({initialName,symbol}){
   const [playerName,setPlayerName] = useState(initialName);
     const [isEditing, setIsEditing] = useState(false);
+    
     function handleEditClick () {
       setIsEditing((editing)=>!editing);
     }
