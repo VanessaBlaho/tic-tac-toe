@@ -1,8 +1,10 @@
 import Gameboard from "./components/Gameboard";
+import Log from "./components/Log";
 import Player from "./components/Player";
 import { useState} from "react";
 
 function App() {
+  const [gameTurns,setGameTurns] = useState([]);
   const [activePlayer,setActivePlayer]= useState('X');
 
   function handleSelectSquare(){
@@ -24,7 +26,7 @@ function App() {
         </ol>
       <Gameboard onSelectSquare={handleSelectSquare} activePlayerSymbol={activePlayer}/>
         </div>
-      LOG
+      <Log/>
       </main>;
   
 }
